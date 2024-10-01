@@ -3,10 +3,10 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-WebApplication/target/
-!WebApplication/.mvn/wrapper/maven-wrapper.jar
-!WebApplication/**/src/main/**/target/
-!WebApplication/**/src/test/**/target/
+WebApplication/WebApplication/target/
+!WebApplication/WebApplication/.mvn/wrapper/maven-wrapper.jar
+!WebApplication/WebApplication/**/src/main/**/target/
+!WebApplication/WebApplication/**/src/test/**/target/
 ### STS ###
 .apt_generated
 .classpath
