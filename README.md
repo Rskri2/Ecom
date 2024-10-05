@@ -65,19 +65,19 @@ This project is a full-stack e-commerce web application built using **Spring Boo
 
 1.Navigate to the frontend directory:
 
-    ```bash
-    cd ../frontend
-    ```
+  ```bash
+  cd ../frontend
+  ```
 2. Install the dependencies:
 
-    ```bash
+  ```bash
     npm install
-    ```
-    3.Start the development server:
+  ```
+3.Start the development server:
 
-    ```bash
-    npm run dev
-    ```
+  ```bash
+  npm run dev
+  ```
 ### Environment Variables
   1.create a .env file and add the following:
 
