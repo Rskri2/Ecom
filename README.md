@@ -106,6 +106,7 @@ This project is a full-stack e-commerce web application built using **Spring Boo
 #### Cart
 ```md
 - POST /api/cart: Add an item to the cart.
+```
 ```md
 - GET /api/cart: Get cart items for the logged-in user.
 ```
