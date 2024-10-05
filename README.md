@@ -46,7 +46,7 @@ This project is a full-stack e-commerce web application built using **Spring Boo
     ```bash
         Copy code
         mvn clean install
-    ``
+    ```
 3. Configure your database connection in application.properties:
 
     ```bash
@@ -58,17 +58,16 @@ This project is a full-stack e-commerce web application built using **Spring Boo
 4. Run the backend server:
 
     ```bash
-
         mvn spring-boot:run
     ```
+
 ### Frontend Setup (React)
 
 1.Navigate to the frontend directory:
 
-    ```bash
-
+  ```bash
         cd ../frontend
-    ```
+  ```
 2. Install the dependencies:
 
     ```bash
@@ -90,19 +89,19 @@ This project is a full-stack e-commerce web application built using **Spring Boo
   ```
 
 ### API Endpoints
-1.Authentication
+  1.Authentication
         POST /signup: Register a new user.
         POST /login: Authenticate and log in the user.
-    2.Products
+  2.Products
         GET /api/products: Get all products.
         GET /api/products/category: Get products by category(e.g., ?q=keyword).
         GET /api/products/search: Search products by keyword (e.g., ?q=keyword).
-    3.Cart
+  3.Cart
         POST /api/cart: Add an item to the cart.
         GET /api/cart: Get cart items for the logged-in user.
         DELETE /api/cart/:id : Delete item from the cart 
         PUT /api/cart/:id : Update the quantity of the product
-    4.Usage
+  4.Usage
         Sign up or log in to access product search and cart features.
         Use the search bar to search for products by keyword or filter products by categories.
         Add products to your cart and view the items from the cart page.
