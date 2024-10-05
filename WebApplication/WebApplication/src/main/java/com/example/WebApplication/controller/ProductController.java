@@ -9,16 +9,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:5173",
+        methods = {RequestMethod.DELETE, RequestMethod.GET, RequestMethod.PUT, RequestMethod.POST, RequestMethod.OPTIONS},
+allowCredentials = "true")
 @RestController
-@CrossOrigin
 @RequestMapping("/api")
 public class ProductController {
     @Autowired
     private ProductService service;
-    @RequestMapping("/")
-    public String greet(){
-        return "Hello World";
-    }
     @GetMapping("/products")
     public ResponseEntity<List<Product>> getAllProduct(){
         return new ResponseEntity<>(service.getAllProducts(), HttpStatus.OK) ;
@@ -62,8 +60,11 @@ public class ProductController {
 
     @GetMapping("/products/search")
     public ResponseEntity<?> searchProduct(@RequestParam String keyword){
-
         return new ResponseEntity<>(service.searchProducts(keyword), HttpStatus.OK);
+    }
+    @GetMapping("/products/category")
+    public ResponseEntity<?> searchByCategory(@RequestParam String keyword){
+        return new ResponseEntity<>(service.searchCategory(keyword), HttpStatus.OK);
     }
 
 }

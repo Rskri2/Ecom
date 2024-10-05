@@ -17,7 +17,7 @@ public class ProductService {
 
     public Product getProduct(int id) {
 
-        return repo.findById(id).orElse(null);
+        return repo.findById(id).orElseThrow();
     }
 
     public Product addProduct(Product p) {
@@ -25,18 +25,28 @@ public class ProductService {
     }
 
     public Product updateProduct(int id, Product p) {
-        return repo.save(p);
+        Product pk = repo.findById(id).orElseThrow();
+        pk.setAvailable(p.getAvailable());
+        pk.setImageUrl(p.getImageUrl());
+        pk.setBrand(p.getBrand());
+        pk.setName(p.getName());
+        pk.setCategory(p.getCategory());
+        pk.setDescription(p.getDescription());
+        pk.setPrice(p.getPrice());
+        pk.setReleaseDate(p.getReleaseDate());
+        repo.save(pk);
+        return pk;
     }
 
     public void deleteProduct(int id) {
          repo.deleteById(id);
     }
 
-//    public List<Product> searchProducts(String keyword) {
-//
-//    }
 
     public List<Product> searchProducts(String keyword) {
         return repo.searchProducts(keyword);
+    }
+    public List<Product> searchCategory(String keyword){
+        return repo.searchByCategory(keyword);
     }
 }

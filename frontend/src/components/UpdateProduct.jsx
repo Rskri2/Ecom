@@ -1,6 +1,6 @@
 import axios from "axios";
 import { PlusOutlined, UploadOutlined } from '@ant-design/icons';
-import { Button, DatePicker, Form, Input,Checkbox,message,Upload} from 'antd';
+import { Button, DatePicker, Form, Input,Checkbox,message,Upload,Select} from 'antd';
 import { useState,useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import moment from "moment";
@@ -8,16 +8,18 @@ const CLOUD_NAME = import.meta.env.VITE_CLOUD_NAME;
 const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 const { TextArea } = Input;
 export default function AddProduct() {
+  const { id } = useParams();
   const [form] = Form.useForm();
   const [image, setImageUrl] = useState(null);
   const submitForm = async(values)=>{
     let toUpload = values;
     if(image) toUpload.imageUrl = image
-    
+    toUpload.id = id;
       try{
         await axios.put(`${BASE_URL}/api/products/${id}`, toUpload);
         message.success("Product updated successfully");
       } catch(err){
+       
         message.error(err.message)
       }
 
@@ -37,7 +39,7 @@ export default function AddProduct() {
             })
             onSuccess()
             setImageUrl(response.data.secure_url);
-             
+             console.log(response)
           } catch(err){
               onError(err.message)
               message.error(err.message);
@@ -45,7 +47,6 @@ export default function AddProduct() {
       }
       
   }
-  const { id } = useParams();
   const [product, setProducts] = useState(null);
   useEffect(() => {
     const fetch = async () => {
@@ -98,11 +99,16 @@ export default function AddProduct() {
     <Form.Item name="brand">
       <Input placeholder='Brand' />
     </Form.Item >
-    <Form.Item name="category">
-      <Input placeholder='Category' />
-
-    </Form.Item>
-  
+  <Form.Item name="category">
+    <Select label ="Select" placeholder="Category">
+      <Select.Option value="Laptop">Laptop</Select.Option>
+      <Select.Option value="Headphone">Headphone</Select.Option>
+      <Select.Option value="Mobile">Mobile</Select.Option>
+      <Select.Option value="Electronics">Electronics</Select.Option>
+      <Select.Option value="Toys">Toys</Select.Option>
+      <Select.Option value="Fashion">Fashion</Select.Option>
+    </Select>
+  </Form.Item>
     <Form.Item name="releaseDate" >
       <DatePicker />
     </Form.Item>

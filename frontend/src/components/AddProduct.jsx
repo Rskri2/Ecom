@@ -73,12 +73,12 @@ export default function AddProduct() {
     <Form.Item name="category">
 
     <Select label ="Select" placeholder="Category">
-        <Select.Option value="Laptop">Salary</Select.Option>
-        <Select.Option value="Headphone">Freelancing</Select.Option>
-        <Select.Option value="Mobile">Investment</Select.Option>
-        <Select.Option value="Electronics">Stock</Select.Option>
-        <Select.Option value="Toys">Bank</Select.Option>
-        <Select.Option value="Fashion">Salary</Select.Option>
+        <Select.Option value="Laptop">Laptop</Select.Option>
+        <Select.Option value="Headphone">Headphone</Select.Option>
+        <Select.Option value="Mobile">Mobile</Select.Option>
+        <Select.Option value="Electronics">Electronics</Select.Option>
+        <Select.Option value="Toys">Toys</Select.Option>
+        <Select.Option value="Fashion">Fashion</Select.Option>
       </Select>
     </Form.Item>
     <Form.Item name="releaseDate" >

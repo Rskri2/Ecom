@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom'
-// import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
     <footer className={`mx-auto max-w-6xl px-4 sm:px-6 mt-12 `}>
