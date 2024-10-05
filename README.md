@@ -84,7 +84,6 @@ This project is a full-stack e-commerce web application built using **Spring Boo
   1.create a .env file and add the following:
 
   ```bash
-    
         VITE_BACKEND_URL=http://localhost:8080
   ```
 
@@ -92,6 +91,8 @@ This project is a full-stack e-commerce web application built using **Spring Boo
   1.Authentication
         POST /signup: Register a new user.
         POST /login: Authenticate and log in the user.
+        ```md
+- `GET /api/products/search: Search products by keyword.
   2.Products
         GET /api/products: Get all products.
         GET /api/products/category: Get products by category(e.g., ?q=keyword).
