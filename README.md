@@ -84,14 +84,13 @@ This project is a full-stack e-commerce web application built using **Spring Boo
 ### Environment Variables
   1.create a .env file and add the following:
 
-    ```bash
+  ```bash
     
         VITE_BACKEND_URL=http://localhost:8080
-    ```
+  ```
 
 ### API Endpoints
-
-  1.Authentication
+1.Authentication
         POST /signup: Register a new user.
         POST /login: Authenticate and log in the user.
     2.Products
