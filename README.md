@@ -44,69 +44,80 @@ This project is a full-stack e-commerce web application built using **Spring Boo
 2. Install Maven dependencies:
 
     ```bash
-        Copy code
-        mvn clean install
+    Copy code
+    mvn clean install
     ```
 3. Configure your database connection in application.properties:
 
     ```bash
-        spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce
-        spring.datasource.username=your-username
-        spring.datasource.password=your-password
-        spring.jpa.hibernate.ddl-auto=update
+    spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce
+    spring.datasource.username=your-username
+    spring.datasource.password=your-password
+    spring.jpa.hibernate.ddl-auto=update
     ```
 4. Run the backend server:
 
     ```bash
-        mvn spring-boot:run
+    mvn spring-boot:run
     ```
 
 ### Frontend Setup (React)
 
 1.Navigate to the frontend directory:
 
-  ```bash
-        cd ../frontend
-  ```
+    ```bash
+    cd ../frontend
+    ```
 2. Install the dependencies:
 
     ```bash
-
-        npm install
+    npm install
     ```
     3.Start the development server:
 
     ```bash
-
-        npm run dev
+    npm run dev
     ```
 ### Environment Variables
   1.create a .env file and add the following:
 
   ```bash
-        VITE_BACKEND_URL=http://localhost:8080
+    VITE_BACKEND_URL=http://localhost:8080
   ```
 
 ### API Endpoints
-  1.Authentication
-        POST /signup: Register a new user.
-        POST /login: Authenticate and log in the user.
-        ```md
-- `GET /api/products/search: Search products by keyword.
-  2.Products
-        GET /api/products: Get all products.
-        GET /api/products/category: Get products by category(e.g., ?q=keyword).
-        GET /api/products/search: Search products by keyword (e.g., ?q=keyword).
-  3.Cart
-        POST /api/cart: Add an item to the cart.
-        GET /api/cart: Get cart items for the logged-in user.
-        DELETE /api/cart/:id : Delete item from the cart 
-        PUT /api/cart/:id : Update the quantity of the product
-  4.Usage
-        Sign up or log in to access product search and cart features.
-        Use the search bar to search for products by keyword or filter products by categories.
-        Add products to your cart and view the items from the cart page.
-        
+#### Authentication
+```md
+- POST /signup: Register a new user.
+```
+```md
+- POST /login: Authenticate and log in the user.
+```
+#### Products
+```md
+- GET /api/products: Get all products.
+```
+```md
+- GET /api/products/category: Get products by category(e.g., ?q=keyword).
+```
+```md
+- GET /api/products/search: Search products by keyword (e.g., ?q=keyword).
+```
+#### Cart
+```md
+- POST /api/cart: Add an item to the cart.
+```
+- GET /api/cart: Get cart items for the logged-in user.
+```md
+- DELETE /api/cart/:id : Delete item from the cart
+``` 
+```md
+- PUT /api/cart/:id : Update the quantity of the product
+```
+### Usage
+#### Sign up or log in to access product search and cart features.
+#### Use the search bar to search for products by keyword or filter products by categories.
+#### Add products to your cart and view the items from the cart page.
 ###  Future Enhancements
-  Product reviews and ratings.
-  Wishlist functionality.
+- Product reviews and ratings.
+- Wishlist functionality.
