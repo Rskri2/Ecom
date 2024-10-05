@@ -56,32 +56,42 @@ This project is a full-stack e-commerce web application built using **Spring Boo
         spring.jpa.hibernate.ddl-auto=update
     ```
 4. Run the backend server:
+
     ```bash
-    mvn spring-boot:run
+
+        mvn spring-boot:run
     ```
 ### Frontend Setup (React)
 
-    1.Navigate to the frontend directory:
+1.Navigate to the frontend directory:
 
     ```bash
+
         cd ../frontend
     ```
-    2. Install the dependencies:
+2. Install the dependencies:
 
     ```bash
+
         npm install
     ```
     3.Start the development server:
+
     ```bash
+
         npm run dev
     ```
 ### Environment Variables
-    1.create a .env file and add the following:
+  1.create a .env file and add the following:
+
     ```bash
-    VITE_BACKEND_URL=http://localhost:8080
+    
+        VITE_BACKEND_URL=http://localhost:8080
     ```
+
 ### API Endpoints
-    1.Authentication
+
+  1.Authentication
         POST /signup: Register a new user.
         POST /login: Authenticate and log in the user.
     2.Products
@@ -99,5 +109,5 @@ This project is a full-stack e-commerce web application built using **Spring Boo
         Add products to your cart and view the items from the cart page.
         
 ###  Future Enhancements
-        Product reviews and ratings.
-        Wishlist functionality.
+  Product reviews and ratings.
+  Wishlist functionality.
